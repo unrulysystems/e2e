@@ -18,6 +18,8 @@ source of truth is `../sortessori/docs/unruly-systems-migration-plan.json`, back
 `../sortessori/docs/webgpu-cutover-audit.md` and the physical walkthrough template at
 `../sortessori/docs/heart-happy-iphone-walkthrough-2026-05-12.md`.
 
+Import gate: physical iOS cutover evidence verified and package-boundary checks green.
+
 Import reusable E2E helpers here only after the Sortessori iOS WebGPU cutover has physical
 manual evidence for touch, VoiceOver, sensory feedback, and Expo GL rollback, and
 `../sortessori` passes:
@@ -28,9 +30,9 @@ bun run verify:webgpu-cutover
 bun run verify:package-boundaries
 ```
 
-The first eligible slice is the device-backed verification pattern, not Sortessori-specific
-selectors, object labels, or gameplay assertions. Keep manual physical evidence explicit;
-do not replace it with automated proxy signals.
+The first eligible slice is device-backed verification patterns without Sortessori-specific
+selectors. Keep object labels and gameplay assertions in Sortessori. Keep manual physical
+evidence explicit; do not replace it with automated proxy signals.
 
 ## Non-Goals
 
